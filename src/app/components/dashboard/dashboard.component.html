@@ -1,0 +1,99 @@
+<!-- <div class="container">
+    
+    <div>
+        <img id="i1" src="/assets/trending.png" alt="Loading" > 
+        
+    </div>
+    <div>
+       <h1>                       </h1>
+    </div>
+
+    <div class="news">
+
+        <div class="news1">
+
+            <img id="i2" src="/assets/news1.webp" /> 
+            <div class="centered"><h2>Light Shri Ram Jyoti, celebrate Deepawali : PM Modi's Request to people for January 22 Event </h2></div>
+         
+        </div>
+
+        <div class="stories">
+
+            <h1>Top Stories</h1>
+            <div class="story">
+                <div>
+                    <img src="/assets/story1.png"  style="width:300px; height:200px;"/>
+           </div>
+           
+           <div class="story-item">
+                    <h5>PM Modi inaugurates Ayodhya railway station, flags off Amrit Bharat and Vande Bharat trains</h5>
+           </div>
+
+            </div>
+
+            <div class="story">
+
+                <div>
+                    <img src="/assets/story1.png"  style="width:100px; height:50px;"/>
+                </div>
+
+                <div class="story-item">
+                    <h5>PM Modi inaugurates Ayodhya railway station, flags off Amrit Bharat and Vande Bharat trains</h5>
+           </div>
+
+            </div>
+
+
+          
+        </div>
+        
+    </div>
+
+
+    <div class="videos">
+        <h1>Latest Videos</h1>
+        <video width="500" height="300" controls>
+            <source src="/assets/video1.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+          Your browser does not support the video tag.
+          </video>
+    </div>
+</div>
+
+ -->
+
+ <div class="container" style="width: 80%; margin: auto;">
+    <h2>News Highlights</h2>
+    <ng-container *ngFor="let news of News">
+        <div class="news-container">
+            <div class="news-card">
+                <div>
+                    <img [src]="news.url" style="width:100%; height:100px;">
+                </div>
+                <div class="card-body">
+                <p class="card-text"><b> {{news.title}}</b></p>
+                <p class="card-text"> {{news.content}}</p>
+                </div>
+                <div class="news-buttons">
+                    <button class="btn btn-read" (click)="onClick()">Read Later</button>
+                    <button class="btn btn-detail" routerLink = "/card/{{news.id}}">Details</button>
+                </div>
+            </div>
+        </div>  
+    </ng-container>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
